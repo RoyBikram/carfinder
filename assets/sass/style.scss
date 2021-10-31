@@ -1,4 +1,481 @@
+// Import google font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+// --------Color----------
+$primary_color: rgba(253, 86, 49, 1);
+$body_background_color: rgba(31, 27, 45, 1);
+$card_background_color:rgba(255, 255, 255, 0.04);
+$text_color_white:rgba(255, 255, 255, 1);
+$text_color_light:rgba(255, 255, 255, 0.7);
+$text_color_dark:rgba(255, 255, 255, 0.5);
+$border_color: rgba(255, 255, 255, 0.2);
+// --------Fonts----------
+$font_size_display_1:56px;
+$font_size_display_2: 36px;
+$font_size_1: 28px; 
+$font_size_2: 20px; 
+$font_size_3: 18px; 
+$font_size_4: 16px; 
+$font_size_5: 14px; 
+$font_size_6: 13px; 
+$font_size_7: 12px; 
+
+// --------Font Weight---------
+$font_weight_bold: 700;
+
+// -------Header Hight---------
+$header_hight: 77px;
+
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
+
+a {
+    color: $text_color_light;
+}
+
+body {
+    background-color: $body_background_color;
+    font-weight: 400;
+    font-size: $font_size_4;
+    header{
+        width: 100%;
+        height:$header_hight;
+        background-color: rgba(31, 27, 45, 0.5);
+        backdrop-filter: blur(20px);
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+        .header_container {
+            max-width: 1320px;
+            width: 100%;
+            padding: 0 12px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            .nav_logo {
+                font-size: $font_size_1;
+                color: $text_color_white;
+                span {
+                    color: $primary_color;
+                    margin-right: 2px;
+                }
+            }
+            .nav_menu {
+                display: flex;
+                align-items: center;
+                .nav_item {
+                    list-style: none;
+                    margin: 0 15px;
+                    font-size: $font_size_5;
+                }
+
+            }
+            .nav_button_container {
+                display: flex;
+                align-items: center;
+                button {
+                    font-size: $font_size_5;
+                    border: none;
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    
+                    i {
+                        font-size: $font_size_3;
+                        margin-right: 8px;
+                    }
+                    
+                }
+                .sign_in {
+                    color: $text_color_light;
+
+                }
+                .sell_car{
+                    background-color: $primary_color;
+                    color: white;
+                    font-weight: $font_weight_bold;
+                    padding: 6px 18px;
+                    border-radius: 8px;
+                }
+                .divider {
+                    height: 60%;
+                    width: 1px;
+                    background-color: $border_color;
+                    margin: 0 10px;
+                }
+            }
+            
+        }
+    }
+    main {
+        section {
+            // height: 100vh;
+            padding-top: $header_hight;
+            .section_container {
+                // border-top: 1px solid white;
+                height: 100%;
+                width: 100%;
+                max-width: 1320px;
+                padding: 0 12px;
+                margin: 0 auto;
+                // background-color: red;
+            }
+        }
+        .home_section {
+            .home_container {
+                .home_intro {
+                    display: flex;
+                    margin-top: 40px;
+                    column-gap: 30px;
+                    // align-items: center;
+                    .home_content{
+                        width: 40%;
+                        margin-top: 60px;
+                        .main_heading {
+                            font-size: $font_size_display_1;
+                            font-weight: $font_weight_bold;
+                            color: $text_color_white;
+                            margin-bottom: 35px;
+                        }
+                        .description {
+                            font-size: $font_size_3;
+                            color: $text_color_light;
+                            margin-bottom: 30px;
+                        }
+                        .home_button {
+                            border: none;
+                            background-color: $primary_color;
+                            padding: 6px 18px;
+                            font-size: $font_size_4;
+                            color: $text_color_white;
+                            border-radius: 8px;
+                            align-items: center;
+                            display: flex;
+                            i {
+                                font-size: 25px;
+    
+                            }
+                        }
+                    }
+                    .home_img{
+                        width: 60%;
+                        margin-top: 60px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                .home_search {
+                    margin-top: 30px;
+                    .top_button_container {
+                        display: flex;
+                        margin-bottom: 24px;
+                        button {
+                            font-size: $font_size_4;
+                            padding: 10px 17px;
+                            border: none;
+                            border-radius: 5px;
+                        }
+                        .new {
+                            background-color: $text_color_white;
+                            color: $primary_color;
+                            margin-right: 13px;
+                            font-weight: $font_weight_bold;
+                        }
+                        .used {
+                            background-color: $card_background_color;
+                            color: $text_color_white;
+                        }
+                    }
+                    .search_container {
+                        // width: 100%;
+                        padding: 8px;
+                        border: 1px solid $border_color ;
+                        border-radius: 8px;
+                        background-color: $card_background_color;
+                        display: flex;
+                        button, input{
+                            // flex-grow: 1;
+                            width: 16%;
+                            border: none;
+                            background-color: transparent;
+                            font-size: $font_size_4;
+                            color: $text_color_dark;
+                            padding: 12px 0;
+                            i {
+                                padding: 0 5px;
+                            }
+                        }
+                        .keyword_container {
+                            width: 18%;
+                            border-right: 1px solid $border_color;
+                            display: flex;
+                            align-items: center;
+                            i {
+                                color: $text_color_light;
+                                padding: 0 10px;
+                            }
+                            input {
+                                width: 100%;
+                                min-width: 0px;
+                                outline: none;
+                                color: $text_color_white;
+                            }
+                        }
+                        .brand , .model, .tyre_size {
+                            border-right: 1px solid $border_color;
+                        }
+                        .search {
+                            background-color: $primary_color;
+                            color: $text_color_white;
+                            font-weight: $font_weight_bold;
+                            border-radius: 5px;
+                            width: 18%;
+                        }
+                    }
+                }
+            }
+        }
+        .type_section {
+            .top_heading_container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                .top_heading {
+                    font-size: $font_size_1;
+                    color: $text_color_white;
+                    font-weight: $font_weight_bold;
+
+                }
+                .view_all_button {
+                    background-color: transparent;
+                    border: none;
+                    font-size: $font_size_4;
+                    color: $text_color_light;
+                    display: flex;
+                    align-items: center;
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .type_card_container {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                // gap: 20px;
+                // justify-content: space-between;
+                .type_card {
+                    flex-grow: 1;
+                    min-width: 200px;
+                    transition: all 0.3s;
+                    border-radius: 12px;
+                    // width: calc(100%/5);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin:10px;
+                    .name {
+                        color: $text_color_light;
+                        font-weight: $font_weight_bold;
+                        margin-bottom: 25px;
+                        margin-top: 10px;
+                        transition: all 0.3s;
+
+                    }
+                    &:hover {
+                        background-color: $card_background_color;
+                        .name {
+                            color: $text_color_white;
+                        }
+                    }
+                }
+            }
+        }
+        .offer_section {
+            .top_heading_container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                .top_heading {
+                    font-size: $font_size_1;
+                    color: $text_color_white;
+                    font-weight: $font_weight_bold;
+                }
+                .view_all_button {
+                    background-color: transparent;
+                    border: none;
+                    font-size: $font_size_4;
+                    color: $text_color_light;
+                    display: flex;
+                    align-items: center;
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .offer_card_container {
+                width: 100%;
+                display: grid;
+                grid-gap: 25px;
+                height: 540px;
+                grid-template-areas: 'card_1 card_2' 
+                                    'card_1 card_3';
+                .card {
+                    border-radius: 15px;
+                    overflow: hidden;
+                    display: flex;
+                    background-color: $card_background_color;
+                    transition: all 0.3s;
+                    border: 1px solid transparent;
+                    &:hover {
+                        border: 1px solid $border_color;
+                        .thumbnail {
+                            opacity: 0.8;
+                        }
+                    }
+                    .thumbnail {
+                        background-position: center;
+                        background-size: cover;
+                        padding: 16px;
+                        transition: all 0.3s;
+                        div {
+                            font-size: $font_size_6;
+                            padding: 5px 10px;
+                            border-radius: 8px;
+                            color: $text_color_white;
+                            width: fit-content;
+                            margin-bottom: 5px;
+                        }
+                        .tag_certified {
+                            background-color: #07C98B;
+                        }
+                        .tag_new {
+                            background-color: #3C76F2;
+                        }
+                        .tag_used {
+                            background-color: #ae3bdb;
+                        }
+                    }
+                    .content {
+                        padding: 20px;
+                        width: 100%;
+                        color: $text_color_light;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .details_container {
+                            height: 45%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            .top_container {
+                                display: flex;
+                                width: 100%;
+                                justify-content: space-between;
+                                .year {
+                                    font-size: $font_size_5;
+                                }
+                                
+                            }
+                            .content_heading {
+                                font-size: $font_size_3;
+                                transition: all 0.3s;
+                                cursor: pointer;
+                                &:hover {
+                                    color: $text_color_white;
+                                }
+                            }
+                            .price {
+                                color: $primary_color;
+                                font-weight: $font_weight_bold;
+                            }
+                        }
+                        .divider {
+                            width: 100%;
+                            height: 1px;
+                            background-color: $border_color;
+                        }
+                        .features_container {
+                            display: flex;
+                            justify-content: space-between;
+                            .feature_1, .feature_2, .feature_3 {
+                                width: 30%;
+                                height: 100px;
+                                background-color: $body_background_color;
+                                border-radius: 12px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                color: $text_color_white;
+                                font-size: $font_size_5;
+                                i {
+                                    font-size: $font_size_1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card_1 {
+                    grid-area: card_1;
+                    flex-direction: column;
+                    .thumbnail {
+                        height: 45%;
+                        background-image: url('/assets/img/offer/card_1.jpg');
+                    }
+                    .content {
+                        height: 55%;
+                    }
+                    
+                }
+                .card_2, .card_3 {
+                    .thumbnail {
+                        width: 45%;
+                    }
+                    .content {
+                        width:55% ;
+                        height: 100%;
+                    }
+                }
+                .card_2 {
+                    grid-area: card_2;
+                    .thumbnail {
+                        background-image: url('/assets/img/offer/card_2.jpg');
+                    }
+                }
+                .card_3 {
+                    grid-area: card_3;
+                    .thumbnail {
+                        background-image: url('/assets/img/offer/card_3.jpg');
+                    }
+                }
+            }
+        }
+        .sponsor_section {
+            .sponsor_container {
+                display: flex;
+                justify-content: space-between;
+                .sponsor {
+                    opacity: 0.5;
+                    transition: all 0.2s;
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+
