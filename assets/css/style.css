@@ -835,3 +835,119 @@ body main .news_section .news_container .card_container .card_3 .thumbnail {
 body main .news_section .news_container .card_container .card_3 .profile {
   background-image: url("/assets/img/news/auther_3.jpg");
 }
+body main .quick_links_section .quick_links_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+body main .quick_links_section .quick_links_container .newsletter {
+  width: 280px;
+}
+body main .quick_links_section .quick_links_container .newsletter .quick_link_logo {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+body main .quick_links_section .quick_links_container .newsletter .quick_link_logo span {
+  color: #fd5631;
+  margin-right: 2px;
+}
+body main .quick_links_section .quick_links_container .newsletter .heading {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+body main .quick_links_section .quick_links_container .newsletter .sub_heading {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+body main .quick_links_section .quick_links_container .newsletter .email_container {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  height: 54px;
+}
+body main .quick_links_section .quick_links_container .newsletter .email_container i {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 10px;
+}
+body main .quick_links_section .quick_links_container .newsletter .email_container .email {
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: white;
+  outline: none;
+}
+body main .quick_links_section .quick_links_container .newsletter .email_container button {
+  display: flex;
+  border: none;
+  background-color: #fd5631;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 8px;
+}
+body main .quick_links_section .quick_links_container .newsletter .email_container button i {
+  font-size: 18px;
+  color: white;
+}
+body main .quick_links_section .quick_links_container .quick_links {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+body main .quick_links_section .quick_links_container .quick_links .links_container .heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+body main .quick_links_section .quick_links_container .quick_links .links_container .link {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+}
+body main .quick_links_section .quick_links_container .contacts {
+  width: 200px;
+}
+body main .quick_links_section .quick_links_container .contacts .phone_number, body main .quick_links_section .quick_links_container .contacts .email {
+  color: white;
+}
+body main .quick_links_section .quick_links_container .contacts .phone_number i, body main .quick_links_section .quick_links_container .contacts .email i {
+  color: #fd5631;
+  font-size: 18px;
+  margin-right: 10px;
+}
+body main .quick_links_section .quick_links_container .contacts .phone_number {
+  margin-bottom: 5px;
+}
+body main .quick_links_section .quick_links_container .contacts .email {
+  margin-bottom: 30px;
+}
+body main .quick_links_section .quick_links_container .contacts .social_media_container {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.7);
+}
+body main .quick_links_section .quick_links_container .contacts .social_media_container div {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+body main .quick_links_section .quick_links_container .contacts .social_media_container i {
+  font-size: 16px;
+}

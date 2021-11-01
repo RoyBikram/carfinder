@@ -9,6 +9,7 @@ $text_color_white:rgba(255, 255, 255, 1);
 $text_color_light:rgba(255, 255, 255, 0.7);
 $text_color_dark:rgba(255, 255, 255, 0.5);
 $border_color: rgba(255, 255, 255, 0.2);
+
 // --------Fonts----------
 $font_size_display_1:56px;
 $font_size_display_2: 36px;
@@ -937,6 +938,134 @@ body {
                         }
                         .profile {
                             background-image: url('/assets/img/news/auther_3.jpg');
+                        }
+                    }
+                }
+            }
+        }
+        .quick_links_section {
+            
+            .quick_links_container {
+                display: flex;
+                justify-content: space-between;
+                padding: 48px;
+                border-radius: 20px;
+                background-color: $card_background_color;
+                .newsletter {
+                    width:280px;
+
+                    .quick_link_logo {
+                        font-size: $font_size_1;
+                        color: $text_color_white;
+                        margin-bottom: 20px;
+                        span {
+                            color: $primary_color;
+                            margin-right: 2px;
+                }
+                    }
+                    .heading {
+                        color: $text_color_white;
+                        font-size: $font_size_3;
+                        font-weight: $font_weight_bold;
+                        margin-bottom: 10px;
+                    }
+                    .sub_heading {
+                        color: $text_color_dark;
+                        font-size: $font_size_6;
+                        margin-bottom: 15px;
+                    }
+                    .email_container {
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid $border_color;
+                        border-radius: 8px;
+                        height: 54px;
+                        i {
+                            // height: 15px;
+                            font-size: $font_size_5;
+                            color: $text_color_dark;
+                            margin:0  10px;
+                        }
+                        .email {
+                            font-size: $font_size_5;
+                            background-color: transparent;
+                            border: none;
+                            width: 100%;
+                            color: $text_color_white;
+                            outline: none;
+                        }
+                        button {
+                            display: flex;
+                            border: none;
+                            background-color: $primary_color;
+                            height: 36px;
+                            width: 36px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 8px;
+                            margin: 8px;
+                            i {
+                                font-size: $font_size_3;
+                                color: $text_color_white;
+
+                            }
+                        }
+                    }
+                }
+                .quick_links {
+                    width: 45%;
+                    display: flex;
+                    justify-content: space-between;
+                    .links_container {
+                        .heading {
+                            font-size: $font_size_3;
+                            font-weight: $font_weight_bold;
+                            color: $text_color_white;
+                            margin-bottom: 15px;
+                        }
+                        .link {
+                            font-size: $font_size_5;
+                            color: $text_color_dark;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                }
+                .contacts {
+                    width: 200px;
+                    .phone_number, .email {
+                        color: $text_color_white;
+
+                        i {
+                            color: $primary_color;
+                            font-size: $font_size_3;
+                            margin-right: 10px;
+                        }
+                        
+                    }
+                    .phone_number {
+                        margin-bottom: 5px;
+                    }
+                    .email {
+                        margin-bottom: 30px;
+                    }
+                    .social_media_container {
+                        display: flex;
+                        justify-content: space-between;
+                        div{
+                            height: 36px;
+                            width: 36px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $card_background_color;
+
+                        }
+                        color: $text_color_light;
+                        i {
+                        font-size: $font_size_4;
                         }
                     }
                 }
