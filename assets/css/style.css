@@ -636,3 +636,202 @@ body main .cars_section .cars_container .card_container .card_3 .thumbnail {
 body main .cars_section .cars_container .card_container .card_4 .thumbnail {
   background-image: url("/assets/img/cars/car_4.jpg");
 }
+body main .auto_market_section .auto_market_container {
+  width: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 48px;
+}
+body main .auto_market_section .auto_market_container .section_heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+body main .auto_market_section .auto_market_container .section_heading .main_heading {
+  font-size: 36px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+body main .auto_market_section .auto_market_container .section_heading .sub_heading {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+body main .auto_market_section .auto_market_container .section_heading .shop_button {
+  border: none;
+  background-color: #fd5631;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 8px;
+  width: fit-content;
+}
+body main .auto_market_section .auto_market_container .card_container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+body main .auto_market_section .auto_market_container .card_container .card {
+  border-radius: 8px;
+}
+body main .auto_market_section .auto_market_container .card_container .card img {
+  height: 160px;
+}
+body main .auto_market_section .auto_market_container .card_container .card .title {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+}
+body main .app_section .app_container {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+body main .app_section .app_container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+body main .app_section .app_container .content .heading {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+body main .app_section .app_container .content .description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+body main .app_section .app_container .content .button_container .ios_button, body main .app_section .app_container .content .button_container .android_button {
+  outline: none;
+  border: transparent;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 18px;
+  height: fit-content;
+}
+body main .app_section .app_container .content .button_container .ios_button img, body main .app_section .app_container .content .button_container .android_button img {
+  height: 34px;
+}
+body main .app_section .app_container .content .button_container .ios_button {
+  margin-right: 15px;
+}
+body main .app_section .app_container .main_img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .app_section .app_container .main_img img {
+  width: 80%;
+}
+body main .news_section .news_container .top_heading_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+body main .news_section .news_container .top_heading_container .top_heading {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+body main .news_section .news_container .top_heading_container .view_all_button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+}
+body main .news_section .news_container .top_heading_container .view_all_button i {
+  font-size: 25px;
+}
+body main .news_section .news_container .card_container {
+  display: flex;
+  column-gap: 2%;
+}
+body main .news_section .news_container .card_container .card {
+  width: calc(96%/3);
+  height: 340px;
+}
+body main .news_section .news_container .card_container .card .thumbnail {
+  height: 60%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+body main .news_section .news_container .card_container .card .content {
+  margin-top: 20px;
+}
+body main .news_section .news_container .card_container .card .content .category {
+  font-size: 13px;
+  color: #fd5631;
+  margin-bottom: 10px;
+}
+body main .news_section .news_container .card_container .card .content .title {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+body main .news_section .news_container .card_container .card .content .auther {
+  width: fit-content;
+  display: grid;
+  grid-template-areas: "profile name name" "profile date comment_number";
+}
+body main .news_section .news_container .card_container .card .content .auther .profile {
+  grid-area: profile;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  margin-right: 20px;
+}
+body main .news_section .news_container .card_container .card .content .auther .name {
+  grid-area: name;
+  color: white;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+body main .news_section .news_container .card_container .card .content .auther .date {
+  grid-area: date;
+}
+body main .news_section .news_container .card_container .card .content .auther .comment_number {
+  grid-area: comment_number;
+}
+body main .news_section .news_container .card_container .card .content .auther .comment_number, body main .news_section .news_container .card_container .card .content .auther .date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+body main .news_section .news_container .card_container .card .content .auther .comment_number i, body main .news_section .news_container .card_container .card .content .auther .date i {
+  margin-right: 5px;
+}
+body main .news_section .news_container .card_container .card_1 .thumbnail {
+  background-image: url("/assets/img/news/car_1.jpg");
+}
+body main .news_section .news_container .card_container .card_1 .profile {
+  background-image: url("/assets/img/news/auther_1.jpg");
+}
+body main .news_section .news_container .card_container .card_2 .thumbnail {
+  background-image: url("/assets/img/news/car_2.jpg");
+}
+body main .news_section .news_container .card_container .card_2 .profile {
+  background-image: url("/assets/img/news/auther_2.jpg");
+}
+body main .news_section .news_container .card_container .card_3 .thumbnail {
+  background-image: url("/assets/img/news/car_3.jpg");
+}
+body main .news_section .news_container .card_container .card_3 .profile {
+  background-image: url("/assets/img/news/auther_3.jpg");
+}
