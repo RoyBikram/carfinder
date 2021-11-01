@@ -7,6 +7,11 @@
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Car Finder</title>
 </head>
@@ -314,10 +319,250 @@
         </div>
       </section>
       <section class="why_us_section" id="why_us">
-        <div class="section_container why_us_container"></div>
+        <div class="section_container why_us_container">
+          <div class="top_heading_container">
+            <div class="top_heading">What sets Finder apart?</div>
+            <button class="view_all_button">
+              How to sell car
+              <i class="bi bi-arrow-right-short"></i>
+            </button>
+          </div>
+          <div class="point_container">
+            <div class="right_side">
+              <div class="point">
+                <div class="point_icon">
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                </div>
+                <div class="point_content">
+                  <div class="point_heading">Over 1 Million Listings</div>
+                  <div class="point_description">That’s more than you’ll find on any other major online automotive marketplace in the USA.</div>
+                </div>
+              </div>
+              <div class="point">
+                <div class="point_icon">
+                  <i class="bi bi-search"></i>
+                </div>
+                <div class="point_content">
+                  <div class="point_heading">Personalized Search</div>
+                  <div class="point_description">Our powerful search makes it easy to personalize your results so you only see the cars and features you care about.</div>
+                </div>
+              </div>
+              <div class="point">
+                <div class="point_icon">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <div class="point_content">
+                  <div class="point_heading">Non-Stop Innovation</div>
+                  <div class="point_description">Our team is constantly developing new features that make the process of buying and selling a car simpler.</div>
+                </div>
+              </div>
+            </div>
+            <div class="middle_divider">
+              <img class="road_line" src="assets/img/why_us/road-line.svg" alt="" srcset="">
+              <img src="assets/img/why_us/car.svg" class="car" alt="" srcset="">
+            </div>
+            <div class="left_side">
+              <div class="point">
+                <div class="point_icon">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                </div>
+                <div class="point_content">
+                  <div class="point_heading">Valuable Insights</div>
+                  <div class="point_description">We provide free access to key info like dealer reviews, market value, price drops.</div>
+                </div>
+              </div>
+              <div class="point">
+                <div class="point_icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="point_content">
+                  <div class="point_heading">Consumer-First Mentality</div>
+                  <div class="point_description">We focus on building the most transparent, trustworthy experience for our users, and we’ve proven that works for dealers, too.</div>
+                </div>
+              </div>
+              <div class="point">
+                <div class="point_icon">
+                  <i class="bi bi-laptop-fill"></i>
+                </div>
+                <div class="point_content">
+                  <div class="point_heading">Online Car Appraisal</div>
+                  <div class="point_description">Specify the parameters of your car to form its market value on the basis of similar cars on Finder.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="cars_section" id="cars">
-        <div class="section_container cars_container"></div>
+        <div class="section_container cars_container">
+          <div class="top_heading_container">
+            <div class="top_heading">Latest car</div>
+            <div class="button_container">
+              <button class="new">New</button>
+              <button class="used">Used</button>
+              <button class="view_all_button">
+                View all
+                <i class="bi bi-arrow-right-short"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card_container my_swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="card card_1 swiper-slide">
+                <div class="thumbnail">
+                  <div class="tag_used">Used</div>
+                </div>
+                <div class="content">
+                  <div class="details_container">
+                    <div class="top_container">
+                      <div class="year">2013</div>
+                      <div class="checkbox_container">
+                        <input type="checkbox" type="checkbox" id="compare1">
+                        <label for="compare1">Compare</label>
+                      </div>
+                    </div>
+                    <div class="content_heading">Ford Exploer XLT</div>
+                    <div class="price">$30,800</div>
+                    <div class="location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      New York
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="features_container">
+                    <div class="feature_1">
+                      <i class="bi bi-speedometer2"></i>
+                      52K mi
+                    </div>
+                    <div class="feature_2">
+                      <i class="bi bi-gear-fill"></i>
+                      Manual
+                    </div>
+                    <div class="feature_3">
+                      <i class="bi bi-droplet-fill"></i>
+                      Diesel
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="card card_2 swiper-slide">
+                <div class="thumbnail">
+                  <div class="tag_new">New</div>
+                </div>
+                <div class="content">
+                  <div class="details_container">
+                    <div class="top_container">
+                      <div class="year">2015</div>
+                      <div class="checkbox_container">
+                        <input type="checkbox" type="checkbox" id="compare1">
+                        <label for="compare1">Compare</label>
+                      </div>
+                    </div>
+                    <div class="content_heading">Nissan 370Z Nismo</div>
+                    <div class="price">$37,900</div>
+                    <div class="location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Kansas
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="features_container">
+                    <div class="feature_1">
+                      <i class="bi bi-speedometer2"></i>
+                      20K mi
+                    </div>
+                    <div class="feature_2">
+                      <i class="bi bi-gear-fill"></i>
+                      Automatic
+                    </div>
+                    <div class="feature_3">
+                      <i class="bi bi-droplet-fill"></i>
+                      Gasoline
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="card card_3 swiper-slide">
+                <div class="thumbnail">
+                  <div class="tag_used">Used</div>
+                  <div class="tag_certified">Certified</div>
+                </div>
+                <div class="content">
+                  <div class="details_container">
+                    <div class="top_container">
+                      <div class="year">2018</div>
+                      <div class="checkbox_container">
+                        <input type="checkbox" type="checkbox" id="compare1">
+                        <label for="compare1">Compare</label>
+                      </div>
+                    </div>
+                    <div class="content_heading">Mercedes Benz C330 Sport</div>
+                    <div class="price">$85,800</div>
+                    <div class="location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      San Francisco
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="features_container">
+                    <div class="feature_1">
+                      <i class="bi bi-speedometer2"></i>
+                      35K mi
+                    </div>
+                    <div class="feature_2">
+                      <i class="bi bi-gear-fill"></i>
+                      Automatic
+                    </div>
+                    <div class="feature_3">
+                      <i class="bi bi-droplet-fill"></i>
+                      Hybrid
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card card_4 swiper-slide">
+                <div class="thumbnail">
+                  <div class="tag_new">New</div>
+                </div>
+                <div class="content">
+                  <div class="details_container">
+                    <div class="top_container">
+                      <div class="year">2021</div>
+                      <div class="checkbox_container">
+                        <input type="checkbox" type="checkbox" id="compare1">
+                        <label for="compare1">Compare</label>
+                      </div>
+                    </div>
+                    <div class="content_heading">Ford Exploer XLT</div>
+                    <div class="price">$80,500</div>
+                    <div class="location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Los Anjeles
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="features_container">
+                    <div class="feature_1">
+                      <i class="bi bi-speedometer2"></i>
+                      8K mi
+                    </div>
+                    <div class="feature_2">
+                      <i class="bi bi-gear-fill"></i>
+                      Manual
+                    </div>
+                    <div class="feature_3">
+                      <i class="bi bi-droplet-fill"></i>
+                      Gasoline
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="app_section" id="app">
         <div class="section_container app_container"></div>
@@ -327,5 +572,8 @@
       </section>
     </main>
     <footer></footer>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

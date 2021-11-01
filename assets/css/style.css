@@ -414,3 +414,225 @@ body main .sponsor_section .sponsor_container .sponsor {
 body main .sponsor_section .sponsor_container .sponsor:hover {
   opacity: 0.9;
 }
+body main .why_us_section .why_us_container .top_heading_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+body main .why_us_section .why_us_container .top_heading_container .top_heading {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+body main .why_us_section .why_us_container .top_heading_container .view_all_button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+}
+body main .why_us_section .why_us_container .top_heading_container .view_all_button i {
+  font-size: 25px;
+}
+body main .why_us_section .why_us_container .point_container {
+  width: 100%;
+  height: 520px;
+  display: flex;
+}
+body main .why_us_section .why_us_container .point_container .right_side .point {
+  align-self: flex-end;
+  text-align: right;
+}
+body main .why_us_section .why_us_container .point_container .middle_divider {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body main .why_us_section .why_us_container .point_container .middle_divider .road_line {
+  height: 100%;
+}
+body main .why_us_section .why_us_container .point_container .middle_divider .car {
+  height: 200px;
+  position: absolute;
+}
+body main .why_us_section .why_us_container .point_container .left_side, body main .why_us_section .why_us_container .point_container .right_side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body main .why_us_section .why_us_container .point_container .left_side .point, body main .why_us_section .why_us_container .point_container .right_side .point {
+  width: 80%;
+}
+body main .why_us_section .why_us_container .point_container .left_side .point_icon, body main .why_us_section .why_us_container .point_container .right_side .point_icon {
+  color: #fd5631;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+body main .why_us_section .why_us_container .point_container .left_side .point_content .point_heading, body main .why_us_section .why_us_container .point_container .right_side .point_content .point_heading {
+  color: white;
+  margin-bottom: 8px;
+}
+body main .why_us_section .why_us_container .point_container .left_side .point_content .point_description, body main .why_us_section .why_us_container .point_container .right_side .point_content .point_description {
+  color: rgba(255, 255, 255, 0.5);
+}
+body main .cars_section .cars_container .top_heading_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+body main .cars_section .cars_container .top_heading_container .top_heading {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+body main .cars_section .cars_container .top_heading_container .button_container {
+  display: flex;
+}
+body main .cars_section .cars_container .top_heading_container .button_container .new, body main .cars_section .cars_container .top_heading_container .button_container .used {
+  font-size: 16px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 13px;
+}
+body main .cars_section .cars_container .top_heading_container .button_container .new {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: white;
+}
+body main .cars_section .cars_container .top_heading_container .button_container .used {
+  background-color: white;
+  color: #fd5631;
+  font-weight: 700;
+}
+body main .cars_section .cars_container .top_heading_container .button_container .view_all_button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+}
+body main .cars_section .cars_container .top_heading_container .button_container .view_all_button i {
+  font-size: 25px;
+}
+body main .cars_section .cars_container .card_container {
+  height: 500px;
+  padding: 10px 0px;
+}
+body main .cars_section .cars_container .card_container .card {
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+body main .cars_section .cars_container .card_container .card:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body main .cars_section .cars_container .card_container .card:hover .thumbnail {
+  opacity: 0.8;
+}
+body main .cars_section .cars_container .card_container .card .thumbnail {
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+  padding: 16px;
+  transition: all 0.3s;
+}
+body main .cars_section .cars_container .card_container .card .thumbnail div {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+body main .cars_section .cars_container .card_container .card .thumbnail .tag_certified {
+  background-color: #07C98B;
+}
+body main .cars_section .cars_container .card_container .card .thumbnail .tag_new {
+  background-color: #3C76F2;
+}
+body main .cars_section .cars_container .card_container .card .thumbnail .tag_used {
+  background-color: #ae3bdb;
+}
+body main .cars_section .cars_container .card_container .card .content {
+  height: 55%;
+  padding: 20px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .cars_section .cars_container .card_container .card .content .details_container {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .cars_section .cars_container .card_container .card .content .details_container .top_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+body main .cars_section .cars_container .card_container .card .content .details_container .top_container .year {
+  font-size: 14px;
+}
+body main .cars_section .cars_container .card_container .card .content .details_container .content_heading {
+  font-size: 18px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+body main .cars_section .cars_container .card_container .card .content .details_container .content_heading:hover {
+  color: white;
+}
+body main .cars_section .cars_container .card_container .card .content .details_container .price {
+  color: #fd5631;
+  font-weight: 700;
+}
+body main .cars_section .cars_container .card_container .card .content .divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+body main .cars_section .cars_container .card_container .card .content .features_container {
+  display: flex;
+  justify-content: space-between;
+}
+body main .cars_section .cars_container .card_container .card .content .features_container .feature_1, body main .cars_section .cars_container .card_container .card .content .features_container .feature_2, body main .cars_section .cars_container .card_container .card .content .features_container .feature_3 {
+  width: 30%;
+  height: 80px;
+  background-color: #1f1b2d;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 13px;
+}
+body main .cars_section .cars_container .card_container .card .content .features_container .feature_1 i, body main .cars_section .cars_container .card_container .card .content .features_container .feature_2 i, body main .cars_section .cars_container .card_container .card .content .features_container .feature_3 i {
+  font-size: 20px;
+}
+body main .cars_section .cars_container .card_container .card_1 .thumbnail {
+  background-image: url("/assets/img/cars/car_1.jpg");
+}
+body main .cars_section .cars_container .card_container .card_2 .thumbnail {
+  background-image: url("/assets/img/cars/car_2.jpg");
+}
+body main .cars_section .cars_container .card_container .card_3 .thumbnail {
+  background-image: url("/assets/img/cars/car_3.jpg");
+}
+body main .cars_section .cars_container .card_container .card_4 .thumbnail {
+  background-image: url("/assets/img/cars/car_4.jpg");
+}
