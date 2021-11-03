@@ -51,6 +51,12 @@ body header .header_container .nav_menu .nav_item {
   margin: 0 15px;
   font-size: 14px;
 }
+body header .header_container .nav_menu .nav_item a {
+  transition: all 0.2s;
+}
+body header .header_container .nav_menu .nav_item:hover a {
+  color: white;
+}
 body header .header_container .nav_button_container {
   display: flex;
   align-items: center;
@@ -68,6 +74,10 @@ body header .header_container .nav_button_container button i {
 }
 body header .header_container .nav_button_container .sign_in {
   color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s;
+}
+body header .header_container .nav_button_container .sign_in:hover {
+  color: white;
 }
 body header .header_container .nav_button_container .sell_car {
   background-color: #fd5631;
@@ -75,6 +85,10 @@ body header .header_container .nav_button_container .sell_car {
   font-weight: 700;
   padding: 6px 18px;
   border-radius: 8px;
+  transition: all 0.2s;
+}
+body header .header_container .nav_button_container .sell_car:hover {
+  box-shadow: 0px 0px 10px 0px #8a3737;
 }
 body header .header_container .nav_button_container .divider {
   height: 60%;
@@ -121,9 +135,13 @@ body main .home_section .home_container .home_intro .home_content .home_button {
   border-radius: 8px;
   align-items: center;
   display: flex;
+  transition: all 0.2s;
 }
 body main .home_section .home_container .home_intro .home_content .home_button i {
   font-size: 25px;
+}
+body main .home_section .home_container .home_intro .home_content .home_button:hover {
+  box-shadow: 0px 0px 10px 0px #8a3737;
 }
 body main .home_section .home_container .home_intro .home_img {
   width: 60%;
@@ -180,13 +198,23 @@ body main .home_section .home_container .home_search .search_container .keyword_
   align-items: center;
 }
 body main .home_section .home_container .home_search .search_container .keyword_container i {
+  transition: all 0.2s;
   color: rgba(255, 255, 255, 0.7);
   padding: 0 10px;
+}
+body main .home_section .home_container .home_search .search_container .keyword_container:hover i {
+  color: white;
 }
 body main .home_section .home_container .home_search .search_container .keyword_container input {
   width: 100%;
   min-width: 0px;
   outline: none;
+  color: white;
+}
+body main .home_section .home_container .home_search .search_container .brand, body main .home_section .home_container .home_search .search_container .model, body main .home_section .home_container .home_search .search_container .tyre_size, body main .home_section .home_container .home_search .search_container .location {
+  transition: all 0.2s;
+}
+body main .home_section .home_container .home_search .search_container .brand:hover, body main .home_section .home_container .home_search .search_container .model:hover, body main .home_section .home_container .home_search .search_container .tyre_size:hover, body main .home_section .home_container .home_search .search_container .location:hover {
   color: white;
 }
 body main .home_section .home_container .home_search .search_container .brand, body main .home_section .home_container .home_search .search_container .model, body main .home_section .home_container .home_search .search_container .tyre_size {
@@ -198,6 +226,10 @@ body main .home_section .home_container .home_search .search_container .search {
   font-weight: 700;
   border-radius: 5px;
   width: 18%;
+  transition: all 0.2s;
+}
+body main .home_section .home_container .home_search .search_container .search:hover {
+  box-shadow: 0px 0px 10px 0px #8a3737;
 }
 body main .type_section .top_heading_container {
   display: flex;
@@ -217,6 +249,10 @@ body main .type_section .top_heading_container .view_all_button {
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
+  transition: all 0.2s;
+}
+body main .type_section .top_heading_container .view_all_button:hover {
+  color: white;
 }
 body main .type_section .top_heading_container .view_all_button i {
   font-size: 25px;
@@ -267,6 +303,10 @@ body main .offer_section .top_heading_container .view_all_button {
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
+  transition: all 0.2s;
+}
+body main .offer_section .top_heading_container .view_all_button:hover {
+  color: white;
 }
 body main .offer_section .top_heading_container .view_all_button i {
   font-size: 25px;
@@ -284,10 +324,9 @@ body main .offer_section .offer_card_container .card {
   display: flex;
   background-color: rgba(255, 255, 255, 0.04);
   transition: all 0.3s;
-  border: 1px solid transparent;
 }
 body main .offer_section .offer_card_container .card:hover {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.308);
 }
 body main .offer_section .offer_card_container .card:hover .thumbnail {
   opacity: 0.8;
@@ -432,6 +471,10 @@ body main .why_us_section .why_us_container .top_heading_container .view_all_but
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
+  transition: all 0.2s;
+}
+body main .why_us_section .why_us_container .top_heading_container .view_all_button:hover {
+  color: white;
 }
 body main .why_us_section .why_us_container .top_heading_container .view_all_button i {
   font-size: 25px;
@@ -518,13 +561,17 @@ body main .cars_section .cars_container .top_heading_container .button_container
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
+  transition: all 0.2s;
+}
+body main .cars_section .cars_container .top_heading_container .button_container .view_all_button:hover {
+  color: white;
 }
 body main .cars_section .cars_container .top_heading_container .button_container .view_all_button i {
   font-size: 25px;
 }
 body main .cars_section .cars_container .card_container {
   height: 500px;
-  padding: 10px 0px;
+  padding: 10px 2px;
 }
 body main .cars_section .cars_container .card_container .card {
   border-radius: 15px;
@@ -668,6 +715,10 @@ body main .auto_market_section .auto_market_container .section_heading .shop_but
   padding: 10px 24px;
   border-radius: 8px;
   width: fit-content;
+  transition: all 0.2s;
+}
+body main .auto_market_section .auto_market_container .section_heading .shop_button:hover {
+  box-shadow: 0px 0px 10px 0px #8a3737;
 }
 body main .auto_market_section .auto_market_container .card_container {
   width: 75%;
@@ -676,6 +727,10 @@ body main .auto_market_section .auto_market_container .card_container {
 }
 body main .auto_market_section .auto_market_container .card_container .card {
   border-radius: 8px;
+  transition: all 0.2s;
+}
+body main .auto_market_section .auto_market_container .card_container .card:hover .title {
+  color: white;
 }
 body main .auto_market_section .auto_market_container .card_container .card img {
   height: 160px;
@@ -715,6 +770,10 @@ body main .app_section .app_container .content .button_container .ios_button, bo
   background-color: rgba(255, 255, 255, 0.2);
   padding: 10px 18px;
   height: fit-content;
+  transition: all 0.2s;
+}
+body main .app_section .app_container .content .button_container .ios_button:hover, body main .app_section .app_container .content .button_container .android_button:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
 body main .app_section .app_container .content .button_container .ios_button img, body main .app_section .app_container .content .button_container .android_button img {
   height: 34px;
@@ -749,6 +808,10 @@ body main .news_section .news_container .top_heading_container .view_all_button 
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
+  transition: all 0.2s;
+}
+body main .news_section .news_container .top_heading_container .view_all_button:hover {
+  color: white;
 }
 body main .news_section .news_container .top_heading_container .view_all_button i {
   font-size: 25px;
@@ -780,6 +843,11 @@ body main .news_section .news_container .card_container .card .content .title {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+body main .news_section .news_container .card_container .card .content .title:hover {
+  color: white;
 }
 body main .news_section .news_container .card_container .card .content .auther {
   width: fit-content;
@@ -896,6 +964,10 @@ body main .quick_links_section .quick_links_container .newsletter .email_contain
   align-items: center;
   border-radius: 8px;
   margin: 8px;
+  transition: all 0.2s;
+}
+body main .quick_links_section .quick_links_container .newsletter .email_container button:hover {
+  box-shadow: 0px 0px 10px 0px #8a3737;
 }
 body main .quick_links_section .quick_links_container .newsletter .email_container button i {
   font-size: 18px;
@@ -916,6 +988,11 @@ body main .quick_links_section .quick_links_container .quick_links .links_contai
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 5px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+body main .quick_links_section .quick_links_container .quick_links .links_container .link:hover {
+  color: white;
 }
 body main .quick_links_section .quick_links_container .contacts {
   width: 200px;
@@ -947,7 +1024,33 @@ body main .quick_links_section .quick_links_container .contacts .social_media_co
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.04);
+  transition: all 0.2s;
+}
+body main .quick_links_section .quick_links_container .contacts .social_media_container div:hover {
+  color: white;
 }
 body main .quick_links_section .quick_links_container .contacts .social_media_container i {
   font-size: 16px;
+}
+body footer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.04);
+  margin-top: 70px;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+body footer .footer_text {
+  color: rgba(255, 255, 255, 0.7);
+}
+body footer .footer_text span {
+  color: #fd5631;
+}
+body footer .footer_text a {
+  transition: all 0.2s;
+}
+body footer .footer_text a:hover {
+  color: white;
 }

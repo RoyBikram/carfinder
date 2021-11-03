@@ -9,6 +9,8 @@ $text_color_white:rgba(255, 255, 255, 1);
 $text_color_light:rgba(255, 255, 255, 0.7);
 $text_color_dark:rgba(255, 255, 255, 0.5);
 $border_color: rgba(255, 255, 255, 0.2);
+$hover_background_color: #8a3737;
+$dark_hover_background_color: rgba(0,0,0,0.5);
 
 // --------Fonts----------
 $font_size_display_1:56px;
@@ -74,6 +76,14 @@ body {
                     list-style: none;
                     margin: 0 15px;
                     font-size: $font_size_5;
+                    a {
+                        transition: all 0.2s;
+                    }
+                    &:hover {
+                        a{
+                            color: $text_color_white;
+                        }
+                    }
                 }
 
             }
@@ -95,6 +105,10 @@ body {
                 }
                 .sign_in {
                     color: $text_color_light;
+                    transition: all 0.2s;
+                    &:hover {
+                        color: $text_color_white;
+                    }
 
                 }
                 .sell_car{
@@ -103,6 +117,10 @@ body {
                     font-weight: $font_weight_bold;
                     padding: 6px 18px;
                     border-radius: 8px;
+                    transition: all 0.2s;
+                    &:hover {
+                        box-shadow: 0px 0px 10px 0px $hover_background_color;
+                    }
                 }
                 .divider {
                     height: 60%;
@@ -157,7 +175,10 @@ body {
                             display: flex;
                             i {
                                 font-size: 25px;
-    
+                            }
+                            transition: all 0.2s;
+                            &:hover {
+                                box-shadow: 0px 0px 10px 0px $hover_background_color;
                             }
                         }
                     }
@@ -216,13 +237,25 @@ body {
                             display: flex;
                             align-items: center;
                             i {
+                                transition: all 0.2s;
                                 color: $text_color_light;
                                 padding: 0 10px;
+                            }
+                            &:hover {
+                                i {
+                                    color: $text_color_white;
+                                }
                             }
                             input {
                                 width: 100%;
                                 min-width: 0px;
                                 outline: none;
+                                color: $text_color_white;
+                            }
+                        }
+                        .brand , .model, .tyre_size, .location {
+                            transition: all 0.2s;
+                            &:hover {
                                 color: $text_color_white;
                             }
                         }
@@ -235,6 +268,10 @@ body {
                             font-weight: $font_weight_bold;
                             border-radius: 5px;
                             width: 18%;
+                            transition: all 0.2s;
+                            &:hover {
+                                box-shadow: 0px 0px 10px 0px $hover_background_color;
+                            }
                         }
                     }
                 }
@@ -259,6 +296,10 @@ body {
                     color: $text_color_light;
                     display: flex;
                     align-items: center;
+                    transition: all 0.2s;
+                    &:hover {
+                        color: $text_color_white;
+                    }
                     i {
                         font-size: 25px;
                     }
@@ -315,6 +356,10 @@ body {
                     color: $text_color_light;
                     display: flex;
                     align-items: center;
+                    transition: all 0.2s;
+                    &:hover {
+                        color: $text_color_white;
+                    }
                     i {
                         font-size: 25px;
                     }
@@ -333,9 +378,8 @@ body {
                     display: flex;
                     background-color: $card_background_color;
                     transition: all 0.3s;
-                    border: 1px solid transparent;
                     &:hover {
-                        border: 1px solid $border_color;
+                        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.308);
                         .thumbnail {
                             opacity: 0.8;
                         }
@@ -491,6 +535,10 @@ body {
                         color: $text_color_light;
                         display: flex;
                         align-items: center;
+                        transition: all 0.2s;
+                        &:hover {
+                            color: $text_color_white;
+                        }
                         i {
                             font-size: 25px;
                         }
@@ -520,9 +568,6 @@ body {
                             height: 200px;
                             position: absolute;
                         }
-                    }
-                    .left_side {
-
                     }
                     .left_side, .right_side {
                         width: 40%;
@@ -588,6 +633,10 @@ body {
                             color: $text_color_light;
                             display: flex;
                             align-items: center;
+                            transition: all 0.2s;
+                            &:hover {
+                                color: $text_color_white;
+                            }
                             i {
                                 font-size: 25px;
                             }
@@ -596,7 +645,7 @@ body {
                 }
                 .card_container {
                     height: 500px;
-                    padding: 10px 0px;
+                    padding: 10px 2px;
 
                     .card {
                         border-radius: 15px;
@@ -753,6 +802,10 @@ body {
                         padding: 10px 24px;
                         border-radius: 8px;
                         width: fit-content;
+                        transition: all 0.2s;
+                        &:hover {
+                            box-shadow: 0px 0px 10px 0px $hover_background_color;
+                        }
                         
                     }
                 }
@@ -761,8 +814,13 @@ body {
                     display: flex;
                     justify-content: space-between;
                     .card{
-                        // padding: 18px 8px;
                         border-radius: 8px;
+                        transition: all 0.2s;
+                        &:hover {
+                            .title {
+                                color: $text_color_white;
+                            }
+                        }
                         img {
                             height: 160px;
                         }
@@ -771,6 +829,7 @@ body {
                             text-align: center;
                             font-weight: $font_weight_bold;
                             margin-top: 10px;
+                            
                         }
                     }
                 }
@@ -806,6 +865,10 @@ body {
                             background-color: $border_color;
                             padding: 10px 18px;
                             height: fit-content;
+                            transition: all 0.2s;
+                            &:hover {
+                                box-shadow: 0px 0px 20px 0px $dark_hover_background_color;
+                            }
                             img {
                                 height: 34px;
                             }
@@ -845,6 +908,10 @@ body {
                         color: $text_color_light;
                         display: flex;
                         align-items: center;
+                        transition: all 0.2s;
+                        &:hover {
+                            color: $text_color_white;
+                        }
                         i {
                             font-size: 25px;
                         }
@@ -874,6 +941,11 @@ body {
                                 font-size: $font_size_3;
                                 color: $text_color_light;
                                 margin-bottom: 10px;
+                                transition: all 0.2s;
+                                cursor: pointer;
+                                &:hover {
+                                    color: $text_color_white;
+                                }
                             }
                             .auther {
                                 width: fit-content;
@@ -1005,6 +1077,10 @@ body {
                             align-items: center;
                             border-radius: 8px;
                             margin: 8px;
+                            transition: all 0.2s;
+                            &:hover {
+                                box-shadow: 0px 0px 10px 0px $hover_background_color;
+                            }
                             i {
                                 font-size: $font_size_3;
                                 color: $text_color_white;
@@ -1028,6 +1104,11 @@ body {
                             font-size: $font_size_5;
                             color: $text_color_dark;
                             margin-bottom: 5px;
+                            transition: all 0.2s;
+                            cursor: pointer;
+                            &:hover {
+                                color: $text_color_white;
+                            }
                         }
                     }
 
@@ -1061,6 +1142,10 @@ body {
                             align-items: center;
                             justify-content: center;
                             background-color: $card_background_color;
+                            transition: all 0.2s;
+                            &:hover {
+                                color: $text_color_white;
+                            }
 
                         }
                         color: $text_color_light;
@@ -1072,6 +1157,28 @@ body {
             }
         }
 
+    }
+    footer {
+        width: 100%;
+        background-color: $card_background_color;
+        margin-top: 70px;
+        height: 77px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font_size_5;
+        .footer_text {
+            color: $text_color_light;
+            span {
+                color: $primary_color;
+            }
+            a {
+                transition: all 0.2s;
+                &:hover {
+                    color: $text_color_white;
+                }
+            }
+        }
     }
 }
 
