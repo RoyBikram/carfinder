@@ -25,9 +25,34 @@ $font_size_7: 12px;
 
 // --------Font Weight---------
 $font_weight_bold: 700;
+:root {
+    // -------Header Hight---------
+    --header_hight: 77px;
+    
+}
 
-// -------Header Hight---------
-$header_hight: 77px;
+@media only screen and (max-width: 1024px) {
+    :root {
+        // -------Header Hight---------
+        --header_hight: 65px;
+        
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    :root {
+        // -------Header Hight---------
+        --header_hight: 50px;
+        
+    }
+
+    // --------Fonts----------
+    $font_size_display_1:46px;
+    $font_size_display_2: 30px;
+    $font_size_1: 26px;
+
+}
+
 
 * {
     padding: 0;
@@ -47,20 +72,21 @@ body {
     font-size: $font_size_4;
     header{
         width: 100%;
-        height:$header_hight;
+        height:var(--header_hight);
         background-color: rgba(31, 27, 45, 0.5);
         backdrop-filter: blur(20px);
         display: flex;
         align-items: center;
         position: fixed;
         z-index: 100;
+        padding: 0 12px;
         .header_container {
             max-width: 1320px;
             width: 100%;
-            padding: 0 12px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             .nav_logo {
                 font-size: $font_size_1;
                 color: $text_color_white;
@@ -78,6 +104,9 @@ body {
                     font-size: $font_size_5;
                     a {
                         transition: all 0.2s;
+                    }
+                    .active {
+                        color: $text_color_white;
                     }
                     &:hover {
                         a{
@@ -129,17 +158,130 @@ body {
                     margin: 0 10px;
                 }
             }
+            .mobile_nav_button {
+                display: none;
+                height: 20px;
+                z-index: 999;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-direction: column;
+                div {
+                    height: 2px;
+                    width: 25px;
+                    background-color: $text_color_white;
+                    transition: all 0.3s;
+                }
+                .bar_1 {
+                    transform-origin: top right;
+                }
+                .bar_3 {
+                    transform-origin: bottom right;
+                }
+            }
+            .mobile_nav_overlay {
+                display: none;
+                position: absolute;
+                height: 100vh;
+                width: 100vw;
+                top: 0;
+                right: -100%;
+                opacity: 0;
+                transition: opacity 0.3s;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            
+            .mobile_nav_container {
+                position: absolute;
+                right: -100%;
+                top: 0;
+                transition: all 0.3s;
+                justify-content: center;
+                flex-direction: column;
+                background-color: rgb(0, 0, 0);
+
+                display: none;
+                height: 100vh;
+                width: 50%;
+                max-width: 300px;
+                
+                .nav_menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 50%;
+                    justify-content: space-evenly;
+                    .nav_item {
+                        list-style: none;
+                        margin: 0 15px;
+                        font-size: $font_size_5;
+                        
+                        a {
+                            text-decoration: none;
+                            transition: all 0.2s;
+                        }
+                        .active {
+                            color: $text_color_white;
+                        }
+                        &:hover {
+                            a{
+                                color: $text_color_white;
+                            }
+                        }
+                    }
+    
+                }
+                .nav_button_container {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    height: 20%;
+                    justify-content: space-evenly;
+                    
+                    button {
+                        font-size: $font_size_5;
+                        border: none;
+                        background-color: transparent;
+                        display: flex;
+                        align-items: center;
+                        
+                        i {
+                            font-size: $font_size_3;
+                            margin-right: 8px;
+                        }
+                        
+                    }
+                    .sign_in {
+                        color: $text_color_light;
+                        transition: all 0.2s;
+                        &:hover {
+                            color: $text_color_white;
+                        }
+    
+                    }
+                    .sell_car{
+                        background-color: $primary_color;
+                        color: white;
+                        font-weight: $font_weight_bold;
+                        padding: 6px 18px;
+                        border-radius: 8px;
+                        transition: all 0.2s;
+                        &:hover {
+                            box-shadow: 0px 0px 10px 0px $hover_background_color;
+                        }
+                    }
+                }
+            }
             
         }
     }
     main {
         section {
-            padding-top: $header_hight;
+            padding: var(--header_hight) 12px 0px 12px;
+            padding-top: var(--header_hight);
             .section_container {
                 height: 100%;
                 width: 100%;
                 max-width: 1320px;
-                padding: 0 12px;
                 margin: 0 auto;
             }
         }
@@ -309,14 +451,11 @@ body {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                // gap: 20px;
-                // justify-content: space-between;
                 .type_card {
                     flex-grow: 1;
-                    min-width: 200px;
+                    min-width: 201px;
                     transition: all 0.3s;
                     border-radius: 12px;
-                    // width: calc(100%/5);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -922,9 +1061,10 @@ body {
                     column-gap: 2%;
                     .card{
                         width: calc(96%/3);
-                        height: 340px;
+                        // height: 340px;
+                        height: fit-content;
                         .thumbnail {
-                            height: 60%;
+                            height: 200px;
                             width: 100%;
                             background-size: cover;
                             background-position: center;
@@ -1180,6 +1320,533 @@ body {
             }
         }
     }
-}
+    // Media Query
+    @media only screen and (max-width: 1200px) {
+        main {
+            // Sponcer
+            .sponsor_section  .sponsor  img {
+                height: 45px;
+            }
+            // Market 
+            .auto_market_section .auto_market_container .card_container .card img {
+                height: 155px;
+            }
+    
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        // --------Fonts----------
+        $font_size_display_1:39px;
+        $font_size_display_2: 34px; 
+        
+        header{
+            .header_container {
+                .nav_menu {
+                    display: none;
+                }
+                .mobile_nav_button {
+                    display: flex;
+                }
+                .mobile_nav_overlay {
+                    display: block;
+                }
+                .mobile_nav_container {
+                    display: flex;
+                }
+                .mobile_nav_active {
+                    right: 0;
+                }
+                .mobile_overlay_active {
+                    opacity: 1;
+                    right: 0;
+                }
+                .mobile_nav_button_active {
+                    .bar_1 {
+                        transform: rotate(-45deg);
+                        width: 26px;
+                        background-color: $primary_color;
+                    }
+                    .bar_3 {
+                        transform: rotate(45deg);
+                        width: 26px;
+                        background-color: $primary_color;
+                    }
+                    .bar_2 {
+                        width: 0;
+                    }
+                }
+                
+            }
+        }
+        main {
+            .home_section {
+                .home_container {
+                    .home_intro {
+                        .home_content{
+                            width: 45%;
+                            margin-top: 0px;
+                            .main_heading {
+                                font-size: $font_size_display_1;
+                                margin-bottom: 25px;
+                            }
+                        }
+                        .home_img{
+                            width: 55%;
+                        }
+                    }
+                    .home_search {
+                        .search_container {
+                            display: grid;
+                            grid-gap: 8px;
+                            grid-template-areas: "keyword keyword keyword keyword" "brand  model tyre_size location" "search search search search";
+                            .keyword_container {
+                                grid-area: keyword;
+                                border-right: none;
+                                width: 100%;
+                                border-bottom: 1px solid $border_color;
+                            }
+                            .brand {
+                                grid-area: brand;
+                            }
+                            .model {
+                                grid-area: model;
+                            }
+                            .tyre_size {
+                                grid-area: tyre_size;
+                            }
+                            .location {
+                                grid-area: location;
+                            }
+    
+                            .brand, .model, .tyre_size, .location {
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            .search {
+                                grid-area: search;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .offer_section {
+                .offer_card_container {
+                    height: fit-content;
+                    grid-template-areas: 'card_1' 
+                                        'card_2'
+                                        'card_3'
+                                        ;
+                    .card_1 {
+                        height: 255px;
+                        flex-direction: row;
+                        .thumbnail {
+                            height: 100%;
+                            width: 45%;
+                        }
+                        .content {
+                            width:55% ;
+                            height: 100%;
+                        }
+                    }
+                    .card_2, .card_3 {
+                        height: 255px;
+                    }
+                }
+            }
+            .sponsor_section {
+                .sponsor_container {
+                    display: grid;
+                    justify-content: space-between;
+                    row-gap: 30px;
+                    grid-template-columns: repeat(6, max-content);
+                }
+            }
+            .why_us_section {
+                .why_us_container {
+                    .point_container {
+                        .left_side, .right_side {
+                            
+                            row-gap: 20px;
+                        }
+                    }
+                }
+            }
+            .auto_market_section {
+                .auto_market_container {
+                    column-gap: 50px;
+                    .card_container {
+                        width: 70%;
+                        display: grid;
+                        grid-template-columns: repeat(2, max-content);
+                        justify-content: space-around;
+                    }
+                }
+            }
+            .app_section {
+                .app_container {
+                    .content {
+                        width: 50%;
+                    }
+                    .main_img {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .news_section {
+                .news_container {
+                    .card_container {
+                        .card{
+                            .thumbnail {
+                                height: 180px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .quick_links_section {
+            
+                .quick_links_container {
+                    display: grid;
+                    grid-template-areas: 'newsletter contacts'
+                                        'quick_links quick_links';
+                    justify-content: space-between;
+                    grid-row-gap: 50px;
+                    .newsletter {
+                        grid-area: newsletter;
+                        width:280px;
+                    }
+                    .quick_links {
+                        grid-area: quick_links;
+                        width: 100%;
+                    }
+                    .contacts {
+                        grid-area: contacts;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px){
+        main{
+            .home_section {
+                .home_container {
+                    .home_intro {
+                        display: flex;
+                        flex-direction: column;
+                        .home_content{
+                            width: 100%;
+                        }
+                        .home_img{
+                            width: 90%;
+                            align-self: center;
+                        }
+                    }
+                    .home_search {
+                        .search_container {
+                            display: flex;
+                            flex-direction: column;
+                            // row-gap: 8px;
+                            grid-gap: 0px;
+                            .keyword_container {
+                                padding: 5px 0;
+    
+                            }
+                            .brand, .model, .tyre_size, .location {
+                                display: flex;
+                                justify-content: flex-start;
+                                padding: 20px 0;
+    
+                            }
+                            .brand, .model, .tyre_size {
+                                border-right: none;
+                                border-bottom: 1px solid $border_color;
+                            }
+                        }
+                    }
+                }
+            }
+            .sponsor_section {
+                .sponsor_container {
+                    grid-template-columns: repeat(4, max-content);
+                }
+            }
+            .why_us_section {
+                .why_us_container {
+                    .point_container {
+                        height: fit-content;
+                        flex-direction: column;
+                        row-gap: 50px;
+                        .right_side {
+                            .point {
+                                align-self: flex-start;
+                                text-align: left;
+                            }
+                        }
+                        .middle_divider {
+                            display: none;
+                        }
+                        .left_side, .right_side {
+                            width: 100%;
+                            row-gap: 50px;
+                            .point {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .auto_market_section {
+                .auto_market_container {
+                    flex-direction: column;
+                    row-gap: 40px;
+                    .section_heading {
+                        width: 100%;
+                        align-items: center;
+                    }
+                    .card_container {
+                        width: 100%;
+                    }
+                }
+            }
+            .app_section {
+                .app_container {
+                    flex-direction: column;
+                    row-gap: 50px;
+                    .content {
+                        align-items: center;
+                        width: 100%;
+                        .heading {
+                            text-align: center;
+                        }
+                        .description {
+                            text-align: center;
+                        }
+                    }
+                    .main_img {
+                        width: 100%;//
+                        img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+            .news_section {
+                .news_container {
+                    .card_container {
+                        // display: grid;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        row-gap: 30px;
+                        .card{
+                            min-width: 240px;
+                            width: 49%;
+                            .thumbnail {
+                                height: 180px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        main {
+            .offer_section {
+                .offer_card_container {
+                    width: 100%;
+                    grid-template-areas: 'card_1' 
+                                        'card_2'
+                                        'card_3';
+                    .card {
+                        height: 460px;
+                        flex-direction: column;
+                        .thumbnail {
+                            height: 45%;
+                            width: 100%;
+                        
+                        }
+                        .content {
+                            width: 100%;
+                            height: 55%;
+                            .features_container {
+                                .feature_1, .feature_2, .feature_3 {
+                                    height: 80px;
+                                }
+                            }
+                        }
+                    }
+                    .card_1 {
+                        grid-area: card_1;
+                        .thumbnail {
+                            background-image: url('/assets/img/offer/card_1.jpg');
+                        }
+                    }
+                    .card_2 {
+                        grid-area: card_2;
+                        .thumbnail {
+                            background-image: url('/assets/img/offer/card_2.jpg');
+                        }
+                    }
+                    .card_3 {
+                        grid-area: card_3;
+                        .thumbnail {
+                            background-image: url('/assets/img/offer/card_3.jpg');
+                        }
+                    }
+                    
+                }
+            }
+            .quick_links_section {
+                .quick_links_container {
+                    grid-template-areas: 'newsletter newsletter'
+                                        'contacts contacts'
+                                        'quick_links quick_links';
+                    .newsletter {
+                        width: 100%;
+                        grid-area: newsletter;
+                    }
+                    .quick_links {
+                        grid-area: quick_links;
+                        width: 100%;
+                    }
+                    .contacts {
+                        grid-area: contacts;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 520px) {
+        main{
+            .news_section {
+                .news_container {
+                    .card_container {
+                        justify-content: center;
+                        .card{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+            .quick_links_section {
+                .quick_links_container {
+                    grid-template-areas: 'newsletter newsletter'
+                                        'contacts contacts'
+                                        'quick_links quick_links';
+                    .newsletter {
+                        width: 100%;
+                        grid-area: newsletter;
+                    }
+                    .quick_links {
+                        grid-area: quick_links;
+                        width: 100%;
+                        flex-direction: column;
+                        row-gap: 30px;
+                    }
+                    .contacts {
+                        grid-area: contacts;
+                    }
+                }
+            }
+    
+        }
+    }
+    @media screen and (max-width: 480px) {
+        header {
+            .header_container .nav_button_container {
+                display: none;
+            }
+        }
+        main {
 
+            .type_section {
+                .type_card_container {
+                    width: 100%;
+                    .type_card {
+                        min-width: 148px !important;
+                        margin:10px;
+                        img {
+                            width: 140px;
+                        }
+                    }
+                }
+            }
+            .type_section, .offer_section, .why_us_section, .cars_section {
+                .top_heading_container {
+                    flex-direction: column;
+                    row-gap: 20px;
+                    button, .button_container {
+                        align-self: flex-end;
+                    }
+                    .button_container {
+                        button {
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+            .offer_section {
+                .offer_card_container {
+                    .card {
+                        height: 430px;
+                        .thumbnail {
+                            height: 40%;
+                        }
+                        .content {
+                            height: 60%;
+                            .features_container {
+                                .feature_1, .feature_2, .feature_3 {
+                                    i {
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .auto_market_section {
+                .auto_market_container {
+                    column-gap: 50px;
+                    // align-items: center;
+                    padding: 30px 20px;
+                    .card_container {
+                        // width: 100%;
+                        // display: grid;
+                        // grid-template-columns: repeat(2, max-content);
+                        // justify-content: center;
+                        .card {
+                            // width: 100%;
+                            img {
+                                height: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+            .app_section .app_container .content .button_container {
+                .ios_button, .android_button {
+                    img {
+                        height: 25px;
+    
+                    }
+                }
+            }
+            .quick_links_section .quick_links_container {
+                padding: 30px;
+            }
+        }
+    }
+
+}
 
