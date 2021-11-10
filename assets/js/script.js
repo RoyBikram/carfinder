@@ -1,3 +1,22 @@
+const preloaderContainer = document.querySelector('.preloader_container')
+
+function preloadFunction() {
+  setTimeout(() => {
+      preloaderContainer.style.opacity = '0'
+      setTimeout(() => {
+          preloaderContainer.style.display = 'none'
+          // Animation on scroll initialize
+          AOS.init({
+              duration: 600,
+              easing: 'ease'
+          });
+
+      },600);
+  },2000);
+}
+
+
+
 //  -------Initialize Swiper---------
 var swiper = new Swiper(".my_swiper", {
     slidesPerView: 3,

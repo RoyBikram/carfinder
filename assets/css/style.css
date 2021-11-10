@@ -30,6 +30,49 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+body .preloader_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1b2d;
+  transition: all 0.5s;
+}
+body .preloader_container svg text {
+  font-weight: 700;
+  fill: transparent;
+  font-size: 58px;
+}
+body .strock_finder {
+  stroke: white;
+  stroke-width: 1;
+}
+body .strock_car {
+  stroke: #fd5631;
+  stroke-width: 2;
+}
+body .strock_car, body .strock_finder {
+  animation: stroke 5s infinite;
+}
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: 0%;
+    stroke-dasharray: 0% 75%;
+  }
+  50% {
+    stroke-dashoffset: -30%;
+    stroke-dasharray: 75% 0%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+    stroke-dasharray: 0% 75%;
+  }
+}
 body header {
   width: 100%;
   height: var(--header_hight);
@@ -125,6 +168,7 @@ body header .header_container .mobile_nav_button {
 body header .header_container .mobile_nav_button div {
   height: 2px;
   width: 25px;
+  border-radius: 2px;
   background-color: white;
   transition: all 0.3s;
 }
@@ -218,7 +262,7 @@ body header .header_container .mobile_nav_container .nav_button_container .sell_
 }
 body main section {
   padding: var(--header_hight) 12px 0px 12px;
-  padding-top: var(--header_hight);
+  padding-top: calc(20px + var(--header_hight));
 }
 body main section .section_container {
   height: 100%;
@@ -1186,6 +1230,9 @@ body footer .footer_text a:hover {
   body header .header_container .nav_menu {
     display: none;
   }
+  body header .header_container .nav_button_container {
+    display: none;
+  }
   body header .header_container .mobile_nav_button {
     display: flex;
   }
@@ -1384,6 +1431,7 @@ body footer .footer_text a:hover {
   }
   body main .auto_market_section .auto_market_container .card_container {
     width: 100%;
+    grid-row-gap: 40px;
   }
   body main .app_section .app_container {
     flex-direction: column;
@@ -1472,6 +1520,9 @@ body footer .footer_text a:hover {
   }
 }
 @media screen and (max-width: 520px) {
+  body .preloader_container svg {
+    transform: scale(70%);
+  }
   body main .news_section .news_container .card_container {
     justify-content: center;
   }
